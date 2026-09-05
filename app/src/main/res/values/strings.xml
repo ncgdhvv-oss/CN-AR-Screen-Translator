@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CN → AR Screen Translator</string>
+    <string name="app_version">v1.0.0</string>
+    <string name="app_description">تطبيق ترجمة شاشة صيني-عربي فوري مع OCR و Overlay</string>
+
+    <!-- الأزرار الرئيسية -->
+    <string name="btn_start_translation">بدء الترجمة</string>
+    <string name="btn_stop_translation">إيقاف الترجمة</string>
+    <string name="btn_settings">الإعدادات</string>
+    <string name="btn_about">حول التطبيق</string>
+    <string name="btn_back">رجوع</string>
+    <string name="btn_save">حفظ</string>
+    <string name="btn_cancel">إلغاء</string>
+
+    <!-- الحالات والرسائل -->
+    <string name="status_idle">متوقف</string>
+    <string name="status_running">جاري العمل</string>
+    <string name="status_paused">متوقف مؤقتاً</string>
+    <string name="status_error">خطأ</string>
+    <string name="status_waiting_permission">في انتظار الإذن</string>
+
+    <!-- الأخطاء والتحذيرات -->
+    <string name="error_permission_denied">تم رفض الإذن المطلوب</string>
+    <string name="error_screen_capture_failed">فشل التقاط الشاشة</string>
+    <string name="error_ocr_failed">فشل التعرف على النص</string>
+    <string name="error_translation_failed">فشلت الترجمة</string>
+    <string name="error_service_not_running">الخدمة غير قيد التشغيل</string>
+    <string name="error_internet_required">الاتصال بالإنترنت مطلوب</string>
+    <string name="error_api_key_missing">مفتاح API مفقود أو غير صحيح</string>
+    <string name="warning_battery_low">البطارية منخفضة - قد يؤثر على الأداء</string>
+
+    <!-- الإعدادات -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_general">الإعدادات العامة</string>
+    <string name="settings_ocr">إعدادات التعرف على النص</string>
+    <string name="settings_translation">إعدادات الترجمة</string>
+    <string name="settings_overlay">إعدادات العرض</string>
+    <string name="settings_performance">إعدادات الأداء</string>
+
+    <!-- إعدادات عامة -->
+    <string name="pref_language">اللغة</string>
+    <string name="pref_language_summary">اختر لغة الواجهة</string>
+    <string name="pref_auto_start">بدء تلقائي</string>
+    <string name="pref_auto_start_summary">بدء الترجمة عند فتح التطبيق</string>
+    <string name="pref_keep_screen_on">إبقاء الشاشة مضاءة</string>
+    <string name="pref_keep_screen_on_summary">منع إطفاء الشاشة أثناء الترجمة</string>
+
+    <!-- إعدادات OCR -->
+    <string name="pref_ocr_engine">محرك التعرف على النص</string>
+    <string name="pref_ocr_engine_summary">اختر محرك ML Kit أو OCR محلي</string>
+    <string name="pref_ocr_language">لغات التعرف</string>
+    <string name="pref_ocr_language_summary">تحديد: الصينية المبسطة والتقليدية</string>
+    <string name="pref_ocr_interval">فترة الفحص (ميلي ثانية)</string>
+    <string name="pref_ocr_interval_summary">المدة بين فحص الشاشة (500-2000ms)</string>
+    <string name="pref_ocr_region">منطقة الفحص</string>
+    <string name="pref_ocr_region_summary">اختر مربع فحص معين من الشاشة أو كاملة</string>
+
+    <!-- إعدادات الترجمة -->
+    <string name="pref_translation_api">خدمة الترجمة</string>
+    <string name="pref_translation_api_summary">اختر Google Translate أو خدمة أخرى</string>
+    <string name="pref_api_key">مفتاح API</string>
+    <string name="pref_api_key_summary">أدخل مفتاح Google Cloud API</string>
+    <string name="pref_offline_mode">وضع بدون إنترنت</string>
+    <string name="pref_offline_mode_summary">استخدام ترجمة محلية (يتطلب نموذج اللغة)</string>
+    <string name="pref_cache_enabled">تفعيل الـ Cache</string>
+    <string name="pref_cache_enabled_summary">حفظ الترجمات السابقة لتسريع الترجمة</string>
+    <string name="pref_cache_size">حجم الـ Cache</string>
+    <string name="pref_cache_size_summary">العدد الأقصى للترجمات المحفوظة</string>
+
+    <!-- إعدادات العرض -->
+    <string name="pref_font_size">حجم الخط</string>
+    <string name="pref_font_size_summary">حجم نص الترجمة المعروضة</string>
+    <string name="pref_bg_opacity">شفافية الخلفية</string>
+    <string name="pref_bg_opacity_summary">درجة شفافية خلفية الترجمة (0-100%)</string>
+    <string name="pref_text_color">لون النص</string>
+    <string name="pref_text_color_summary">اختر لون نص الترجمة</string>
+    <string name="pref_bg_color">لون الخلفية</string>
+    <string name="pref_bg_color_summary">اختر لون خلفية الترجمة</string>
+    <string name="pref_position">موضع الترجمة</string>
+    <string name="pref_position_summary">أسفل النص / أعلى / جانب</string>
+    <string name="pref_floating_button">الزر العائم</string>
+    <string name="pref_floating_button_summary">إظهار زر عائم لبدء/إيقاف الترجمة</string>
+
+    <!-- إعدادات الأداء -->
+    <string name="pref_gpu_optimization">تحسين GPU</string>
+    <string name="pref_gpu_optimization_summary">استخدام معالج الرسومات لتسريع المعالجة</string>
+    <string name="pref_thread_pool">عدد المعالجات</string>
+    <string name="pref_thread_pool_summary">عدد threads للمعالجة المتوازية</string>
+    <string name="pref_memory_limit">حد الذاكرة</string>
+    <string name="pref_memory_limit_summary">الحد الأقصى للذاكرة (بالميجابايت)</string>
+
+    <!-- معلومات التطبيق -->
+    <string name="about_title">حول التطبيق</string>
+    <string name="about_version">الإصدار: %s</string>
+    <string name="about_developer">المطور: NCG DHVV</string>
+    <string name="about_license">الترخيص: MIT</string>
+    <string name="about_description">تطبيق متخصص لترجمة النصوص الصينية من شاشة الهاتف إلى العربية في الوقت الفعلي باستخدام تقنيات OCR و AI للترجمة.</string>
+    <string name="about_features">المزايا:\n• التقاط شاشة حي بدون تأخير\n• OCR دقيق للنصوص الصينية\n• ترجمة فورية إلى العربية\n• عرض Overlay ذكي\n• استهلاك بطارية منخفض\n• واجهة سهلة الاستخدام</string>
+    <string name="about_source">المشروع مفتوح المصدر على GitHub</string>
+    <string name="about_github">github.com/ncgdhvv-oss/CN-AR-Screen-Translator</string>
+
+    <!-- الإشعارات -->
+    <string name="notification_title">مترجم الشاشة نشط</string>
+    <string name="notification_message">الترجمة جارية... اضغط للتحكم</string>
+    <string name="notification_channel_name">خدمة الترجمة</string>
+    <string name="notification_channel_desc">إشعارات خدمة ترجمة الشاشة المستمرة</string>
+
+    <!-- الرسائل المتنوعة -->
+    <string name="msg_welcome">مرحباً بك في مترجم الشاشة!</string>
+    <string name="msg_ready">جاهز للترجمة - اضغط بدء الترجمة</string>
+    <string name="msg_translating">جاري البحث عن نصوص صينية...</string>
+    <string name="msg_found_text">تم العثور على نص: %s</string>
+    <string name="msg_translated">الترجمة: %s</string>
+    <string name="msg_copying_to_clipboard">تم نسخ الترجمة إلى الحافظة</string>
+    <string name="msg_screen_rotation">تم تدوير الشاشة - تم تحديث الإحداثيات</string>
+    <string name="msg_cache_hit">ترجمة محفوظة مسبقاً (بدون تأخير)</string>
+    <string name="msg_cache_miss">ترجمة جديدة (قد يكون هناك تأخير)</string>
+
+    <!-- الأرقام والقيم -->
+    <string name="default_font_size">16</string>
+    <string name="default_opacity">80</string>
+    <string name="default_interval">800</string>
+    <string name="default_cache_size">500</string>
+    <string name="default_threads">4</string>
+    <string name="default_memory_limit">256</string>
+
+    <!-- نصوص المساعدة -->
+    <string name="help_title">مساعدة</string>
+    <string name="help_how_to_use">كي��ية الاستخدام:\n\n1. أضغط \"بدء الترجمة\"\n2. وافق على أذونات الشاشة\n3. أفتح أي تطبيق يحتوي على نصوص صينية\n4. الترجمة تظهر تلقائياً فوق النص\n5. أضغط الزر العائم لإيقاف الترجمة</string>
+    <string name="help_permissions">الأذونات المطلوبة:\n• التقاط الشاشة: لرؤية ما على الشاشة\n• العرض فوق التطبيقات: لإظهار الترجمة\n• الإنترنت: لخدمات الترجمة</string>
+    <string name="help_api_setup">إعداد Google Cloud API:\n1. افتح console.cloud.google.com\n2. أنشئ مشروع جديد\n3. فعّل Translation API\n4. أنشئ مفتاح API\n5. انسخ المفتاح في إعدادات التطبيق</string>
+    <string name="help_troubleshooting">حل المشاكل:\n• إذا لم تظهر الترجمة: تحقق من الأذونات\n• إذا كانت الترجمة بطيئة: قلل فترة الفحص\n• إذا استهلكت بطارية كثيرة: فعّل تحسين الأداء</string>
+</resources>
