@@ -72,7 +72,7 @@ class ScreenCaptureManager(
         val buffer = planes[0].buffer
         buffer.rewind()
         val pixelStride = planes[0].pixelStride
-        val padding = planes[0].rowPadding()
+        val padding = planes[0].rowPadding
         val width = image.width
         val height = image.height
         val bitmap = Bitmap.createBitmap(
