@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_general">
+        <SwitchPreferenceCompat
+            android:key="pref_auto_start"
+            android:title="@string/pref_auto_start"
+            android:summary="@string/pref_auto_start_summary"
+            android:defaultValue="false" />
+        <SwitchPreferenceCompat
+            android:key="pref_keep_screen_on"
+            android:title="@string/pref_keep_screen_on"
+            android:summary="@string/pref_keep_screen_on_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_ocr">
+        <ListPreference
+            android:key="pref_ocr_interval"
+            android:title="@string/pref_ocr_interval"
+            android:summary="@string/pref_ocr_interval_summary"
+            android:entries="@array/ocr_interval_labels"
+            android:entryValues="@array/ocr_interval_values"
+            android:defaultValue="800" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_translation">
+        <EditTextPreference
+            android:key="pref_api_key"
+            android:title="@string/pref_api_key"
+            android:summary="@string/pref_api_key_summary"
+            android:inputType="text" />
+        <SwitchPreferenceCompat
+            android:key="pref_cache_enabled"
+            android:title="@string/pref_cache_enabled"
+            android:summary="@string/pref_cache_enabled_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_overlay">
+        <SeekBarPreference
+            android:key="pref_font_size"
+            android:title="@string/pref_font_size"
+            android:summary="@string/pref_font_size_summary"
+            android:defaultValue="16"
+            android:max="32"
+            android:min="8" />
+        <SeekBarPreference
+            android:key="pref_bg_opacity"
+            android:title="@string/pref_bg_opacity"
+            android:summary="@string/pref_bg_opacity_summary"
+            android:defaultValue="80"
+            android:max="100"
+            android:min="0" />
+    </PreferenceCategory>
+</PreferenceScreen>

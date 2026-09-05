@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ocr_interval_labels">
+        <item>500ms (سريع جداً)</item>
+        <item>800ms (سريع)</item>
+        <item>1000ms (متوسط)</item>
+        <item>1500ms (بطيء)</item>
+        <item>2000ms (بطيء جداً)</item>
+    </string-array>
+    <string-array name="ocr_interval_values">
+        <item>500</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+    </string-array>
+
+    <string-array name="position_labels">
+        <item>أسفل النص</item>
+        <item>أعلى النص</item>
+        <item>جانب النص</item>
+    </string-array>
+    <string-array name="position_values">
+        <item>bottom</item>
+        <item>top</item>
+        <item>side</item>
+    </string-array>
+</resources>
