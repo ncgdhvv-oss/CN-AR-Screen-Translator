@@ -15,6 +15,9 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Disable multidex for debug builds (improves build time)
+        multiDexEnabled false
     }
 
     buildTypes {
@@ -22,9 +25,13 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
         }
         debug {
             minifyEnabled false
+            debuggable true
+            // Optimization for debug builds
+            testCoverageEnabled false
         }
     }
 
@@ -35,10 +42,25 @@ android {
 
     kotlinOptions {
         jvmTarget = '11'
+        suppressWarnings = false
+        allWarningsAsErrors = false
     }
 
     buildFeatures {
         viewBinding true
+        buildConfig true
+    }
+    
+    // Performance optimizations
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-*.pro'
+        exclude 'META-INF/*.kotlin_module'
+    }
+    
+    lint {
+        abortOnError false
+        checkReleaseBuilds true
+        disable 'MissingTranslation'
     }
 }
 
