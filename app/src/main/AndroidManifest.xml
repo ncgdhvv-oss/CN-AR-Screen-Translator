@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- الأذونات المطلوبة -->
+    
+    <!-- 1. Screen Capture Permission - التقاط شاشة الهاتف -->
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    
+    <!-- 2. Display Over Other Apps - عرض overlay فوق التطبيقات الأخرى -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    
+    <!-- 3. Internet - الاتصال بخدمات الترجمة الأونلاين -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- 4. Foreground Service - تشغيل خدمة في الخلفية -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    
+    <!-- 5. Wake Lock - منع إطفاء الشاشة أثناء العمل -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- 6. Access Network State - التحقق من حالة الشبكة -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <!-- 7. Vibration - اهتزاز عند بدء/إيقاف الخدمة -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- 8. Read Logs - قراءة السجلات (اختياري) -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CNARScreenTranslator"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="34">
+
+        <!-- MainActivity - الواجهة الرئيسية -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize|locale">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Foreground Service - خدمة الترجمة الرئيسية -->
+        <service
+            android:name=".service.TranslationService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaProjection" />
+
+        <!-- Settings Activity - إعدادات التطبيق -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_title"
+            android:parentActivityName=".ui.MainActivity" />
+
+        <!-- About Activity -->
+        <activity
+            android:name=".ui.AboutActivity"
+            android:exported="false"
+            android:label="@string/about_title"
+            android:parentActivityName=".ui.MainActivity" />
+
+    </application>
+
+</manifest>
