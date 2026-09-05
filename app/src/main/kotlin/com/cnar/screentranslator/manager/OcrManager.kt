@@ -28,7 +28,7 @@ class OcrManager(private val context: Context) {
             
             val recognizedTexts = mutableListOf<RecognizedText>()
             
-            for (block in result.blocks) {
+            for (block in result.textBlocks) {
                 for (line in block.lines) {
                     val text = line.text
                     val boundingBox = line.boundingBox ?: continue
