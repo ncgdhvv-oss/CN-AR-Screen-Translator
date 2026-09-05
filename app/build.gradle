@@ -16,7 +16,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         
-        // Disable multidex for debug builds (improves build time)
+        // Optimize build performance
         multiDexEnabled false
     }
 
@@ -30,7 +30,6 @@ android {
         debug {
             minifyEnabled false
             debuggable true
-            // Optimization for debug builds
             testCoverageEnabled false
         }
     }
@@ -52,11 +51,6 @@ android {
     }
     
     // Performance optimizations
-    packagingOptions {
-        exclude 'META-INF/proguard/androidx-*.pro'
-        exclude 'META-INF/*.kotlin_module'
-    }
-    
     lint {
         abortOnError false
         checkReleaseBuilds true
